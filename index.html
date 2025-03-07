@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adarsh Kumar - Software Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.3s ease;
+        }
+        .dark {
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+        .dark .project-card {
+            background-color: #2d2d2d;
+        }
+        .progress-bar {
+            transition: width 1s ease-in-out;
+        }
+        .project-card {
+            transition: transform 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        .typewriter {
+            overflow: hidden;
+            border-right: .15em solid #0891b2;
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: .15em;
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+        }
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #0891b2 }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-md z-50 dark:bg-gray-800">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-cyan-600">AK</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="hover:text-cyan-600">Home</a>
+                    <a href="#about" class="hover:text-cyan-600">About</a>
+                    <a href="#skills" class="hover:text-cyan-600">Skills</a>
+                    <a href="#projects" class="hover:text-cyan-600">Projects</a>
+                    <a href="#contact" class="hover:text-cyan-600">Contact</a>
+                </div>
+                <button id="darkModeToggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700">
+                    <i class="bi bi-moon-stars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-20 min-h-screen flex items-center">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 text-center md:text-left">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4 typewriter">
+                        Hi, I'm Adarsh Kumar
+                    </h1>
+                    <p class="text-xl md:text-2xl text-gray-600 mb-8 dark:text-gray-300">
+                        Passionate Software Engineer | Full Stack Developer | Problem Solver
+                    </p>
+                    <div class="flex justify-center md:justify-start space-x-4">
+                        <a href="#contact" class="bg-cyan-600 text-white px-8 py-3 rounded-full hover:bg-cyan-700 transition">
+                            Contact Me
+                        </a>
+                        <a href="#" id="downloadCV" class="border-2 border-cyan-600 text-cyan-600 px-8 py-3 rounded-full hover:bg-cyan-600 hover:text-white transition">
+                            Download CV
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 mt-12 md:mt-0">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=400&h=400" 
+                         alt="Adarsh Kumar" 
+                         class="w-64 h-64 rounded-full mx-auto border-4 border-cyan-600 shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white dark:bg-gray-900">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">About Me</h2>
+            <div class="max-w-3xl mx-auto text-gray-600 dark:text-gray-300">
+                <p class="mb-6">
+                    I'm a dedicated software engineer with a passion for creating efficient and scalable solutions. With over 3 years of experience in full-stack development, I've worked on diverse projects that have helped me develop a comprehensive understanding of the software development lifecycle.
+                </p>
+                <p class="mb-6">
+                    I hold a degree in Computer Science and have expertise in both front-end and back-end technologies. My approach to problem-solving is methodical, and I always strive to write clean, maintainable code that follows best practices.
+                </p>
+                <p>
+                    When I'm not coding, I enjoy contributing to open-source projects and staying updated with the latest technological trends. I believe in continuous learning and pushing the boundaries of what's possible through technology.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="skill-category p-6 bg-white rounded-lg shadow-md dark:bg-gray-700">
+                    <h3 class="text-xl font-semibold mb-4">Programming Languages</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>JavaScript</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-cyan-600 h-2 rounded-full progress-bar" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Python</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-cyan-600 h-2 rounded-full progress-bar" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Java</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-cyan-600 h-2 rounded-full progress-bar" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category p-6 bg-white rounded-lg shadow-md dark:bg-gray-700">
+                    <h3 class="text-xl font-semibold mb-4">Frameworks & Libraries</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>React</span>
+                                <span>88%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-cyan-600 h-2 rounded-full progress-bar" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Node.js</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-cyan-600 h-2 rounded-full progress-bar" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Django</span>
+                                <span>82%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-cyan-600 h-2 rounded-full progress-bar" style="width: 82%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category p-6 bg-white rounded-lg shadow-md dark:bg-gray-700">
+                    <h3 class="text-xl font-semibold mb-4">Tools & Technologies</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Git</span>
+                                <span>92%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-cyan-600 h-2 rounded-full progress-bar" style="width: 92%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Docker</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-cyan-600 h-2 rounded-full progress-bar" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>AWS</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-cyan-600 h-2 rounded-full progress-bar" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white dark:bg-gray-900">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="project-card bg-gray-50 rounded-lg overflow-hidden shadow-lg dark:bg-gray-700">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&h=300" alt="Project 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">E-Commerce Platform</h3>
+                        <p class="text-gray-600 mb-4 dark:text-gray-300">A full-stack e-commerce solution with real-time inventory management and payment processing.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-cyan-100 text-cyan-600 rounded-full text-sm">React</span>
+                            <span class="px-3 py-1 bg-cyan-100 text-cyan-600 rounded-full text-sm">Node.js</span>
+                            <span class="px-3 py-1 bg-cyan-100 text-cyan-600 rounded-full text-sm">MongoDB</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-cyan-600 hover:text-cyan-700">
+                                <i class="bi bi-github"></i> Source Code
+                            </a>
+                            <a href="#" class="text-cyan-600 hover:text-cyan-700">
+                                <i class="bi bi-link-45deg"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card bg-gray-50 rounded-lg overflow-hidden shadow-lg dark:bg-gray-700">
+                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&h=300" alt="Project 2" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Task Management App</h3>
+                        <p class="text-gray-600 mb-4 dark:text-gray-300">A collaborative task management application with real-time updates and team features.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-cyan-100 text-cyan-600 rounded-full text-sm">Vue.js</span>
+                            <span class="px-3 py-1 bg-cyan-100 text-cyan-600 rounded-full text-sm">Firebase</span>
+                            <span class="px-3 py-1 bg-cyan-100 text-cyan-600 rounded-full text-sm">Tailwind CSS</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-cyan-600 hover:text-cyan-700">
+                                <i class="bi bi-github"></i> Source Code
+                            </a>
+                            <a href="#" class="text-cyan-600 hover:text-cyan-700">
+                                <i class="bi bi-link-45deg"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Get In Touch</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Contact Information</h3>
+                        <div class="space-y-4">
+                            <p class="flex items-center">
+                                <i class="bi bi-envelope mr-3 text-cyan-600"></i>
+                                adarsh.kumar@example.com
+                            </p>
+                            <p class="flex items-center">
+                                <i class="bi bi-phone mr-3 text-cyan-600"></i>
+                                +1 (123) 456-7890
+                            </p>
+                            <p class="flex items-center">
+                                <i class="bi bi-geo-alt mr-3 text-cyan-600"></i>
+                                San Francisco, CA
+                            </p>
+                            <div class="flex space-x-4 mt-6">
+                                <a href="#" class="text-2xl text-gray-600 hover:text-cyan-600 dark:text-gray-300">
+                                    <i class="bi bi-linkedin"></i>
+                                </a>
+                                <a href="#" class="text-2xl text-gray-600 hover:text-cyan-600 dark:text-gray-300">
+                                    <i class="bi bi-github"></i>
+                                </a>
+                                <a href="#" class="text-2xl text-gray-600 hover:text-cyan-600 dark:text-gray-300">
+                                    <i class="bi bi-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <form id="contactForm" class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-medium mb-1">Name</label>
+                                <input type="text" class="w-full px-4 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-cyan-600 dark:bg-gray-700 dark:border-gray-600" required>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium mb-1">Email</label>
+                                <input type="email" class="w-full px-4 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-cyan-600 dark:bg-gray-700 dark:border-gray-600" required>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium mb-1">Message</label>
+                                <textarea rows="4" class="w-full px-4 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-cyan-600 dark:bg-gray-700 dark:border-gray-600" required></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-cyan-600 text-white px-6 py-3 rounded-lg hover:bg-cyan-700 transition">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-8 dark:bg-gray-900">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-600 dark:text-gray-300">© 2023 Adarsh Kumar | Built with ❤️ by Adarsh</p>
+        </div>
+    </footer>
+
+    <script>
+        // Dark mode toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const html = document.documentElement;
+        
+        darkModeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            const isDark = html.classList.contains('dark');
+            darkModeToggle.innerHTML = isDark ? '<i class="bi bi-sun"></i>' : '<i class="bi bi-moon-stars"></i>';
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Contact form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! I will get back to you soon.');
+            this.reset();
+        });
+
+        // Download CV
+        document.getElementById('downloadCV').addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('CV download will be available soon!');
+        });
+
+        // Animate skill bars on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.width = entry.target.getAttribute('data-width');
+                }
+            });
+        });
+
+        document.querySelectorAll('.progress-bar').forEach((bar) => {
+            bar.style.width = '0';
+            bar.setAttribute('data-width', bar.style.width);
+            observer.observe(bar);
+        });
+    </script>
+<script>document.body.addEventListener('wheel', e => { if (!e.ctrlKey) return; e.preventDefault(); return }, { passive: false })</script>
+	</body>
+</html>
